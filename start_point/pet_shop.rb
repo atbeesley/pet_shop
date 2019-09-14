@@ -1,3 +1,5 @@
+
+
 def pet_shop_name(pet_shop)
   return pet_shop[:name]
 end
@@ -6,7 +8,7 @@ def total_cash(pet_shop)
   return pet_shop[:admin][:total_cash]
 end
 
-def   add_or_remove_cash(pet_shop, first_amount)
+def  add_or_remove_cash(pet_shop, first_amount)
   pet_shop[:admin][:total_cash] += first_amount
 end
 
@@ -36,7 +38,6 @@ def find_pet_by_name(pet_shop, name)
   for pet in pet_shop[:pets]
     if pet[:name] == name
       return pet
-
     end
   end
   return nil
@@ -55,7 +56,43 @@ def add_pet_to_stock(pet_shop, new_pet)
 end
 
 def customer_cash(customers)
-for customer in customers
-  return customers[:cash]
+  for customer in customers
+    return customers[:cash]
+  end
 end
+
+def remove_customer_cash(customer, amount)
+  for customer in customers
+    customers[:cash].delete()
+  end
+end
+
+def customer_pet_count(customer, count)
+  for customer in customers
+  return customers[:pets].length()
+  end
+end
+#
+# def add_pet_to_customer(customer, new_pet)
+#     for customer in customers
+#  customers[:pets].push(new_pet)
+# end
+# end
+#
+# def add_pet_to_customer(customer, new_pet)
+# customers_pets = []
+# #for customer in customers
+# customer[:pets].push(new_pet)
+# #end
+# return customers_pets
+# end
+
+def customer_can_afford_pet(customers, new_pet)
+  for customer in customers
+    if customers[:cash] >= new_pet[:price]
+      return true
+    else
+      return false
+    end
+  end
 end
