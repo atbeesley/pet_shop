@@ -69,16 +69,18 @@ end
 
 def customer_pet_count(customers)
   for customer in customers
-return customers[:pets].length()
-end
+    return customers[:pets].length()
+  end
 end
 
 
-# def add_pet_to_customer(customers, new_pet)
-#     for customer in customers
-#  customers[:pets].push(new_pet.length)
-# end
-# end
+def add_pet_to_customer(customers, new_pet)
+  pet_count = []
+  for customer in customers
+    pet_count = customers[:pets].push(new_pet)
+    return pet_count.length()
+  end
+end
 
 
 
