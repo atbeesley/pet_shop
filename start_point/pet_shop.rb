@@ -87,11 +87,9 @@ end
 # optional
 
 def customer_can_afford_pet(customers, new_pet)
-  for customer in customers
     if customers[:cash] >= new_pet[:price]
       return true
     else
       return false
     end
   end
-end
