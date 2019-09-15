@@ -63,31 +63,24 @@ end
 
 def remove_customer_cash(customers, amount)
   for customer in customers
-    return customers[:cash] -= amount 
+    return customers[:cash] -= amount
   end
 end
 
-def customer_pet_count(customer, count)
+def customer_pet_count(customers)
   for customer in customers
-  return customers[:pets].length()
-  end
+return customers[:pets].length()
+end
 end
 
 
-#
-# def add_pet_to_customer(customer, new_pet)
+# def add_pet_to_customer(customers, new_pet)
 #     for customer in customers
-#  customers[:pets].push(new_pet)
+#  customers[:pets].push(new_pet.length)
 # end
 # end
-#
-# def add_pet_to_customer(customer, new_pet)
-# customers_pets = []
-# #for customer in customers
-# customer[:pets].push(new_pet)
-# #end
-# return customers_pets
-# end
+
+
 
 # optional
 
