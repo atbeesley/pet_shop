@@ -82,10 +82,6 @@ def add_pet_to_customer(customers, new_pet)
   end
 end
 
-
-
-# optional
-
 def customer_can_afford_pet(customers, new_pet)
     if customers[:cash] >= new_pet[:price]
       return true
@@ -93,3 +89,12 @@ def customer_can_afford_pet(customers, new_pet)
       return false
     end
   end
+
+# def sell_pet_to_customer(pet_shop, customer, pet)
+#   if new_pet[:price] <= customers[:cash]
+#     pet_shop[:admin][:pets_sold] =+ 1
+#     customers[:pets] << pet
+#     customers[:cash] -= pet[:price]
+#     pet_shop[:admin][:total_cash] += pet[:price]
+#   end
+# end
